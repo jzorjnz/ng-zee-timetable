@@ -1,0 +1,76 @@
+<!-- <table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Roll#</th>
+  </tr>
+  <tr *ngFor="let item of data">
+    <td>{{item.firstName}}</td>
+    <td>{{item.lastName}}</td>
+    <td>{{item.rollNumber}}</td>
+  </tr>
+</table> -->
+
+<div *ngIf="data && rows && timeDividers" class="time-table-scroll"
+  style="overflow: hidden; display: flex; padding: 1em;">
+  <div class="time-table-cell rows">
+    <ul class="title-row">
+      <li class="time-table-header-row-row"></li>
+    </ul>
+    <ul class="data-row" *ngFor="let row of rows"
+      [ngStyle]="{'background': options.rowLabel.background, color: options.rowLabel.labelColor}">
+      <li class="time-table-row-row">
+        <span>{{row}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="time-table-cell" style="width: 100%; overflow-x: auto;">
+    <div [ngStyle]="{width: (20*timeDividers.length) + 'px'}">
+      <ul class="time-table-header-time">
+        <li class="time-table-header-time-item" *ngFor="let slot of timeDividers; let i = index">
+          <span *ngIf="slot.includes(':00') || slot.includes(':30')">{{slot}}</span>
+
+        </li>
+      </ul>
+
+      <ul *ngFor="let row of rows">
+        <li class="time-table-row" *ngFor="let slot of timeDividers; let i = index">
+          <span *ngIf="getDataAtSlot(row, slot)" class="slot-element"
+            [ngStyle]="{width: (20*getDuration(row, slot) - 2) + 'px', background: options.element.background}">
+            <div [ngStyle]="{'color': options.element.titleColor}">{{getDataAtSlot(row, slot).title}}</div>
+            <div [ngStyle]="{'color': options.element.subTitleColor}">
+              <small>{{getDataAtSlot(row, slot).subTitle}}</small></div>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<!-- <ul>
+  <li class="time-table-row" *ngFor="let slot of timeDividers;">
+    <div *ngIf="getDataAtSlot('Mon', slot)" [ngClass]="getDataAtSlot('Mon', slot)? 'slot-element': ''">
+      {{getDataAtSlot('Mon', slot).title}}
+    </div>
+  </li>
+</ul>
+
+<ul>
+  <li class="time-table-row" *ngFor="let slot of timeDividers;">
+    <div *ngIf="getDataAtSlot('Tue', slot)" [ngClass]="getDataAtSlot('Tue', slot)? 'slot-element': ''" [ngStyle]="">
+      {{getDataAtSlot('Tue', slot).title}}
+    </div>
+  </li>
+</ul> -->
+
+<!-- 
+<table class="custom">
+  <tr>
+    <td class="lines">
+      <div class="data">
+        
+      </div>
+    </td>
+  </tr>
+</table> -->

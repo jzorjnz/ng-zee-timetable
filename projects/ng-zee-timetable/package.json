@@ -1,0 +1,28 @@
+{
+  "name": "ng-zee-timetable",
+  "description": "Angular 2+ Timetable Library",
+  "version": "0.0.7",
+  "author": {
+    "name": "Syed Zeeshan Akhtar",
+    "email": "akhtar.syedzeeshan@gmail.com",
+    "url": "http://zeeshan.website"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jzorjnz/ng-zee-timetable.git"
+  },
+  "keywords": [
+    "angular",
+    "ng",
+    "time table",
+    "timetable",
+    "time-table",
+    "ng-zee-timetable"
+  ],
+  "dependencies": {},
+  "peerDependencies": {
+    "@angular/common": "~8.2.14",
+    "@angular/core": "~8.2.14"
+  }
+}

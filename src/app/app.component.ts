@@ -1,43 +1,5 @@
-# NgZeeTimetable
-
-Angular 2+ Timetable Library
-
-## Installation
-```bash
-npm i ng-zee-timetable --save
-```
-
-## Import
-Import NgZeeTimeTableModule in your app.module like this:
-
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { NgZeeTimeTableModule } from 'ng-zee-timetable';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgZeeTimeTableModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-
-## Usage
-
-* Create data in the following format in a Angular component where used:
-
-```typescript
 import { Component } from '@angular/core';
-import { NgZeeTimetableData, NgZeeTimetableOptions } from 'ng-zee-timetable';
+import { NgZeeTimetableData, NgZeeTimetableOptions } from 'projects/ng-zee-timetable/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -116,14 +78,3 @@ export class AppComponent {
 
   days: string[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 }
-
-```
-
-* Use in Component HTML:
-```html
-<ng-zee-timetable [data]="data" [rows]="days" [options]="options"></ng-zee-timetable>
-```
-
-## Note:
-* This library is built and tested using Angular Cli version 8.3.25 so I can't guarantee if this will work with older versions.
-* Use at your own risk.
