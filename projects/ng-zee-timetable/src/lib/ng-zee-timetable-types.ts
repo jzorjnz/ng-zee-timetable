@@ -1,18 +1,18 @@
-export interface NgZeeTimetableDataElement {
+export interface NgZeeTimeTableDataElement {
   title: string;
   subTitle: string,
   endTime: string;
 }
 
-export interface NgZeeTimetableData {
+export interface NgZeeTimeTableData {
   [day: string]: {
-    [row: string]: NgZeeTimetableDataElement
+    [row: string]: NgZeeTimeTableDataElement
   }
 }
 
 // var map: { [email: string]: Customer; } = {};
 
-export interface NgZeeTimetableOptions {
+export interface NgZeeTimeTableOptions {
   element: {
     background: string;
     titleColor: string;
@@ -27,7 +27,7 @@ export interface NgZeeTimetableOptions {
 
 
 
-var data: NgZeeTimetableData = {
+var data: NgZeeTimeTableData = {
   "Monday": {
     "08:00": {
       title: "start",

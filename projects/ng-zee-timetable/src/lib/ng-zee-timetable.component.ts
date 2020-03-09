@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { NgZeeTimetableData, NgZeeTimetableDataElement, NgZeeTimetableOptions } from './ng-zee-timetable-types';
+import { NgZeeTimeTableData, NgZeeTimeTableDataElement, NgZeeTimeTableOptions } from './ng-zee-timetable-types';
 
 @Component({
   selector: 'ng-zee-timetable',
   templateUrl: './ng-zee-timetable.component.html',
   styleUrls: ['./ng-zee-timetable.component.scss']
 })
-export class NgZeeTimetableComponent implements OnInit, OnChanges {
+export class NgZeeTimeTableComponent implements OnInit, OnChanges {
 
   // -----------------------------------------------------------------------------------------------
   getFormattedTime(v) {
@@ -66,8 +66,8 @@ export class NgZeeTimetableComponent implements OnInit, OnChanges {
 
   timeDividers: any[] = null;
   @Input('rows') rows = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-  @Input('data') data: NgZeeTimetableData = null;
-  @Input('options') options: NgZeeTimetableOptions = {
+  @Input('data') data: NgZeeTimeTableData = null;
+  @Input('options') options: NgZeeTimeTableOptions = {
     element: {
       background: '#f97c7c',
       titleColor: 'white',
@@ -79,7 +79,7 @@ export class NgZeeTimetableComponent implements OnInit, OnChanges {
     }
   };
 
-  initTimeDividers(data: NgZeeTimetableData) {
+  initTimeDividers(data: NgZeeTimeTableData) {
     let minTime = 480;
     let maxTime = 780;
 
@@ -109,7 +109,7 @@ export class NgZeeTimetableComponent implements OnInit, OnChanges {
 
 
 
-  getDataAtSlot(row, slot): NgZeeTimetableDataElement {
+  getDataAtSlot(row, slot): NgZeeTimeTableDataElement {
     if (this.data[row] && this.data[row][slot]) {
       return this.data[row][slot];
     }

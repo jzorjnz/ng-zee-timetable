@@ -1,6 +1,10 @@
-# NgZeeTimetable
+# NgZeeTimeTable
 
 Angular 2+ Timetable Library
+
+## Live demo
+* [Stackblitz](https://angular-ng-zee-timetable.stackblitz.io)
+* [Github.io](https://jzorjnz.github.io/ng-zee-timetable.github.io)
 
 ## Installation
 ```bash
@@ -37,7 +41,7 @@ export class AppModule { }
 
 ```typescript
 import { Component } from '@angular/core';
-import { NgZeeTimetableData, NgZeeTimetableOptions } from 'ng-zee-timetable';
+import { NgZeeTimeTableData, NgZeeTimeTableOptions } from 'ng-zee-timetable';
 
 @Component({
   selector: 'app-root',
@@ -46,7 +50,7 @@ import { NgZeeTimetableData, NgZeeTimetableOptions } from 'ng-zee-timetable';
 })
 export class AppComponent {
 
-  data: NgZeeTimetableData = {
+  data: NgZeeTimeTableData = {
     "Monday": {
       "08:00": {
         title: "English",
@@ -104,7 +108,7 @@ export class AppComponent {
     }
   };
 
-  options: NgZeeTimetableOptions = {
+  options: NgZeeTimeTableOptions = {
     element: {
       background: '#f97c7c', titleColor: 'white', subTitleColor: '#862424'
     },

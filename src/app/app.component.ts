@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgZeeTimetableData, NgZeeTimetableOptions } from 'projects/ng-zee-timetable/src/public-api';
+import { NgZeeTimeTableData, NgZeeTimeTableOptions } from 'projects/ng-zee-timetable/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { NgZeeTimetableData, NgZeeTimetableOptions } from 'projects/ng-zee-timet
 })
 export class AppComponent {
 
-  data: NgZeeTimetableData = {
+  data: NgZeeTimeTableData = {
     "Monday": {
       "08:00": {
         title: "English",
@@ -66,7 +66,7 @@ export class AppComponent {
     }
   };
 
-  options: NgZeeTimetableOptions = {
+  options: NgZeeTimeTableOptions = {
     element: {
       background: '#f97c7c', titleColor: 'white', subTitleColor: '#862424'
     },

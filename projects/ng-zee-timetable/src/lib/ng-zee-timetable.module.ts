@@ -1,15 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { NgZeeTimetableComponent } from './ng-zee-timetable.component';
+import { NgZeeTimeTableComponent } from './ng-zee-timetable.component';
 
 @NgModule({
   declarations: [
-    NgZeeTimetableComponent
+    NgZeeTimeTableComponent
   ],
   imports: [
-    BrowserModule
+    CommonModule
   ],
-  exports: [NgZeeTimetableComponent]
+  exports: [NgZeeTimeTableComponent]
 })
 export class NgZeeTimeTableModule { }
