@@ -1,12 +1,13 @@
 {
   "name": "ng-zee-timetable",
   "description": "Angular 2+ Timetable Library",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": {
     "name": "Syed Zeeshan Akhtar",
     "email": "akhtar.syedzeeshan@gmail.com",
     "url": "http://zeeshan.website"
   },
+  "homepage": "https://jzorjnz.github.io/ng-zee-timetable.github.io/",
   "license": "MIT",
   "repository": {
     "type": "git",
